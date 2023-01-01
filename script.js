@@ -13,3 +13,12 @@ let box = document.getElementById("box")
 box.addEventListener("click", function(){
     console.log("I want to open the box!")
 })
+
+let myLeads = []
+const inputEl = document.getElementById("input-el")
+
+const playerName ="Liz"
+let credits= 45
+
+credits = credits - 10
+playerName = "something else"
