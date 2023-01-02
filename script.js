@@ -42,3 +42,15 @@ let fullPrice = basePrice - discount + shippingCost
 //Finally, notfying the customer
 
 console.log("Total cost: " = fullPrice + ". It will arrive in " + shippingTime)
+
+let myLeads = []
+const inputEl = document.getElementById("input-el")
+const inputBtn = document.getElementById("input-btn")
+
+//push the value "www.awesomelead.com" to myArray when the input button is clicked
+
+inputBtn.addEventListener("click", fuction() {
+    myLeads.push("www.awesomelead.com")
+    console.log(myLeads)
+
+})
