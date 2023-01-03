@@ -50,7 +50,12 @@ const inputBtn = document.getElementById("input-btn")
 //push the value "www.awesomelead.com" to myArray when the input button is clicked
 
 inputBtn.addEventListener("click", fuction() {
-    myLeads.push("www.awesomelead.com")
+    myLeads.push(inputEl.value)
     console.log(myLeads)
 
 })
+
+//Log out the items in the myLeads array using for a loop
+for (let i = 0; i <myLeads.length; i++) {
+    console.log(myLeads[i])
+}
