@@ -43,9 +43,10 @@ let fullPrice = basePrice - discount + shippingCost
 
 console.log("Total cost: " = fullPrice + ". It will arrive in " + shippingTime)
 
-let myLeads = []
+let myLeads = ["www.awesomelead.com", "epiclead.com", "www.greatlead.com"]
 const inputEl = document.getElementById("input-el")
 const inputBtn = document.getElementById("input-btn")
+const ulEl = document.getElementById("ul-el")
 
 //push the value "www.awesomelead.com" to myArray when the input button is clicked
 
@@ -58,4 +59,9 @@ inputBtn.addEventListener("click", fuction() {
 //Log out the items in the myLeads array using for a loop
 for (let i = 0; i <myLeads.length; i++) {
     console.log(myLeads[i])
+}
+
+//Render the leads in the unordered list using ulEl.textContent
+for (let i = 0; i < myLeads.length; i++) {
+    ulEl.textContent += myLeads[i] + " "
 }
