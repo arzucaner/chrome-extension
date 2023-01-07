@@ -80,3 +80,42 @@ container.innerHTML = "<button onclick='buy()'>Buy!</button>"
 function buy(){
     container.innerHTML += "<p>Thank you for buying!<p>"
 }
+
+// Replace.textContent with. innerHTML and use <li> tags
+for (let i = 0; i <myLeads.length; i++) {
+    ulEl.innerHTML += "<li>" + myLeads[i] + "</li>"
+}
+
+//Let's try a different method!
+for (let i = 0; i <myLeads.length; i++) {
+    //ulEl.innerHTML += "<li>" + myLeads[i] + "</li>"
+    //create element
+    //set text content
+    //append to ul
+    const li = document.createElement("li")
+    li.textContent = myLeads[i]
+    ulEl.append(li)
+}
+
+//1.Create a variable, listItems, to hold all the HTML for the list items
+//Assign it to an empty string to begin with
+for (let i = 0; i <myLeads.length; i++) {
+    //2.Add the item to the listItems variable instead of the ulEl.innerHTML
+    ulEl.innerHTML += "<li>" + myLeads[i] + "</li>"
+}
+
+//3. Render the listItems inside the unordered list using ulEl.innerHTML
+ulEl.innerHTML = listItems
+
+//2.Add the item to the listItems variable instead of the ulEl.innerHTML 
+renderLeads()
+
+//1. Wrap the code below in a renderLeads() function
+function renderLeads() {
+    let listItems = ""
+    for (let i = 0; i <myLeads.length; i++) {
+        listItems += "<li>" + myLeads[i] + "</li>"
+    }
+     
+    ulEl.innerHTML = listItems
+}
