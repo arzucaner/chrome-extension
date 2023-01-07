@@ -52,8 +52,8 @@ const ulEl = document.getElementById("ul-el")
 
 inputBtn.addEventListener("click", fuction() {
     myLeads.push(inputEl.value)
-    console.log(myLeads)
-
+    inputEl.value =""
+    renderLeads()
 })
 
 //Log out the items in the myLeads array using for a loop
@@ -116,6 +116,66 @@ function renderLeads() {
     for (let i = 0; i <myLeads.length; i++) {
         listItems += "<li>" + myLeads[i] + "</li>"
     }
+
+    //Wrap the lead in a anchor tag (<a>) indise the <li>
+    //Can you make the link open ina a new tab?
+    listItems += "<li><a target='_blank' href='" + myLeads[i] + "'>" + myLeads[i] + "</a></li>"
      
+    ulEl.innerHTML = listItems
+}
+
+    // listItems += "<li><a target='_blank' href='" + myLeads[1] + "'>" + myLeads[i] + "</a></li>"
+       listItems += ` 
+       <li>
+          <a target='_blank' href='${myLeads[i]}'>
+             ${myLeads[i]}
+          </a>
+        </li>
+      `
+    
+    ulEl.innerHTML = listItems
+
+// teplate strings/literals
+const recipient = "Liz"
+
+//Refactor the email string to use template strings
+const email = `Hey ${recipient}! How is it going? Cheers Arzu`
+
+console.log(email)
+
+const recipient = "Liz"
+
+// Create a new variable, sender, and set its value to your name
+const sender = "Arzu Caner"
+// Use your sender variable instead of "Arzu"
+const email = `Hey ${recipient}! How is it going? Cheers ${sender}`
+
+console/log(email)
+
+const recipient = "Liz"
+const sender = "Arzu Caner"
+
+// Break the email string into multiple lines
+const email =
+Hey ${recipient}!
+
+How is it going?
+
+Cheers ${sender}
+`
+console.log(email)
+ 
+function renderLeads() {
+    let listItems = ""
+    for (let i = 0; i <myLeads.length; i++) {
+    // Refactor the code below to use a template string
+    listItems += `
+        <li>
+            <a target='_blank' href='${myLeads[i]'>
+                ${myLeads[i]}
+            </a>
+        </li>
+      `
+    }
     ulEl.innerHTML = listItems
 }
